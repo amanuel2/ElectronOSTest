@@ -1,7 +1,9 @@
 # ElectronOSTest
 ElectronOSTest...
 
-While In your in Projec Folder
+While In your in Project Folder
 Run npm install...
+Then Run bower install...
+Then finnally npm start..
 
-Then Run npm start 
+You should see the desktop app then! 
