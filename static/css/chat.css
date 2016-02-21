@@ -1,0 +1,18 @@
+#flex{
+  background-color: blue
+}
+#toolbar{
+  position: relative;
+  left:320px
+}
+#mdcardImage{
+  width:320px;
+  height:150px
+  position:absolute;;
+  bottom:
+}
+
+#profileImage{
+  width:100px;
+  height:100px;
+}
