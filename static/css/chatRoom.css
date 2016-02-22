@@ -1,0 +1,25 @@
+#ChatInput{
+  position: relative;
+  top:560px;
+  left:50px;
+  width:850px;
+}
+#fabChatIcon{
+  position: relative;
+  top:7px;
+  left:2px;
+}
+#fabChat{
+  position: relative;
+  left:867px;
+  bottom:55px;
+}
+#chatInbox{
+  overflow: auto;
+  height:580px;
+  width:105.5%;
+}
+#chatForm{
+  position: relative;
+  bottom:580px;
+}
