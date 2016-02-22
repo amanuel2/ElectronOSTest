@@ -1,13 +1,15 @@
 app.controller('chatCtrl', ["$scope","userChatService", "$mdDialog", "userService", "$firebaseArray", "$firebaseObject", function($scope,userChatService, $mdDialog, userService, $firebaseArray,
         $firebaseObject) {
-
+        
+///////////////////////////////////////////////******SHOWING FRIENDS***********////////////////////////////////////////////////////////
         var ref = new Firebase('https://sparke.firebaseio.com/')
         ref.onAuth(function(authData) {
             $scope.friends = $firebaseArray(ref.child("UsersAuthInfo").child(authData.uid).child("Friends"))
               console.log($scope.friends)
         })
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+//////////////////////////////////////////////******SETTING THE INFO*****************///////////////////////////////////////
         ref.onAuth(function(authData) {
             var obj = $firebaseObject(ref.child("UsersAuthInfo").child(authData.uid));
             obj.$loaded(function(data) {
@@ -21,7 +23,9 @@ app.controller('chatCtrl', ["$scope","userChatService", "$mdDialog", "userServic
                 }
             );
         })
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//////////////////////////////////////////////////////////*****SETTING UP THE SEARCH*****////////////////////////////////////
         var search = $firebaseArray(ref.child("Users"))
         $scope.arrayOfPeopleWithImages = []
 
@@ -44,19 +48,21 @@ app.controller('chatCtrl', ["$scope","userChatService", "$mdDialog", "userServic
 
             console.log($scope.arrayOfPeopleWithImages);
 
-            /////////////////////////SHOWING FRIENDS////////////////////////////////
-
 
         }, function(error) {
             console.error("Error: " + error)
         })
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////**********GOING TO CHAT*************///////////////////////////////////////////////
         $scope.toChat = function(username,email,image,backimage,uid){
           console.log(username,email,image,backimage,uid)
           userChatService.setProfileInfo(username,backimage,email,image,uid)
           window.location.hash="chat/chatRoom"
         }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////******WHEN USER CLICKS ON ANOTHER USER ON SEARCH*********////////////////////
         $scope.dialog = function(user, ev) {
             userService.setProfileInfo(user.name, user.backimage, user.email, user.image, user.uid)
 
@@ -104,10 +110,8 @@ app.controller('chatCtrl', ["$scope","userChatService", "$mdDialog", "userServic
                 }, function() {
                     $scope.status = undefined;
                 });
-
-
-
         }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     }])
     //imageProfile
