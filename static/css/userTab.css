@@ -1,0 +1,22 @@
+#profileImage{
+  display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#images{
+  positon:relative;
+}
+#mdcardImage{
+  positon:absolute;
+  bottom:100px;
+  width:100px;
+}
+.inner-image {
+  position: absolute;
+  top: 15px;
+
+}

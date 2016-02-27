@@ -1,0 +1,67 @@
+#ChatInput{
+  position: relative;
+  top:360px;
+  left:10px;
+  width: 450px;
+}
+#toolbar{
+  position: relative;
+   left: 284px;;
+}
+#fabChatIcon{
+  position: relative;
+  top:7px;
+  left:2px;
+}
+
+
+#fabChat{
+  position: relative;
+      left: 447px;
+  bottom:55px;
+}
+#chatInbox{
+  overflow: auto;
+  height:570px;
+  width:50.8%;
+}
+#chatForm{
+  position: relative;
+  bottom:380px;
+}
+.contatinerChatRoom {
+    width: 1065px;
+    background-color: #d3d3d3;
+        right: -900px;
+    bottom: 685px;
+}
+    /* Height / width / positioning can be customized for your use case.
+       For demo purposes, we make firepad fill the entire browser. */
+    #firepad-container {
+      width:300px;
+      height:300px;
+      bottom:0px;
+                  right: -560px;
+        bottom: 670px;
+    height: 600px;
+    width: 460px;
+    }
+ .listdemoListControls {
+  /* Add some right padding so that the text doesn't overlap the buttons */ }
+  .listdemoListControls md-divider {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .listdemoListControls md-list-item > p,
+  .listdemoListControls md-list-item > .md-list-item-inner > p,
+  .listdemoListControls md-list-item .md-list-item-inner > p,
+  .listdemoListControls md-list-item .md-list-item-inner > .md-list-item-inner > p {
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Likely future */ }
+  .listdemoListControls .secondary-button-padding p {
+    padding-right: 100px; }

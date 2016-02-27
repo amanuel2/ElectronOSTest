@@ -1,0 +1,95 @@
+<head>
+<link rel="stylesheet" href="css/settings.css"/>
+</head>
+
+
+<div class="conatainerSettings">
+     <section class="section" id="section0">
+     <div class="content">
+         <img src="https://image.freepik.com/free-vector/under-construction_23-2147513878.jpg" />
+    </div>
+</section>
+   <section class="section" id="section1">
+        <div class="content">
+            <img ng-src="{{profile.Image}}"/>
+            <p>
+                Username: <span>{{profile.Username}}</span> <br>
+                Email: <span>{{profile.Email}}</span> <br>
+                UID: <span>{{profile.UID}}</span>
+            </p>
+        </div>
+    </section>
+    <section class="section" id="section2">
+        <div class="content">
+          <h1>Change Email</h1>
+          <br>
+           <form name="changeEmailForm">
+            <md-input-container>
+                <label>Old Email</label>
+                <input type="email" ng-model="oldEmailChangeEmail" required/>
+            </md-input-container>
+            <md-input-container>
+                <label>New Email</label>
+                <input type="email" ng-model="newEmailChangeEmail" required/>
+            </md-input-container>
+                        <md-input-container>
+                <label>Password</label>
+                <input type="password" ng-model="PasswordChangeEmail" required/>
+            </md-input-container>
+            <md-button class="md-raised" ng-disabled="changeEmailForm.$invalid" ng-click="changeEmail()">
+                <md-icon md-svg-icon="email"></md-icon>
+                Change Email
+            </md-button>
+          </form>
+        </div>
+    </section>
+    <section class="section" id="section3">
+        <div class="content">
+            <h1>Change Password</h1>
+        </div>
+    </section>
+    <section class="section" id="section4">
+        <div class="content">
+            <h1>Change Username</h1>
+        </div>
+    </section>
+    <section class="section" id="section5">
+        <div class="content">
+            <h1>Change Image</h1>
+        </div>
+    </section>
+</div>
+<script src="../sparky/bower_components/ScrollMenu/scrollmenu.js"></script>
+<link rel="stylesheet" href="../sparky/bower_components/ScrollMenu/scrollmenu.css"/>
+  <script>
+
+        var setupOption = {
+            template: '<div class="menu-wrap"><div class="menu"><%= label %></div></div>',
+            anchorSetup: [
+                {
+                  backgroundColor: "#ffff1a",
+                    label: "Under Construction..."
+                },
+                {
+                    backgroundColor: "#dc767d",
+                    label: "Profile"
+                    },
+                {
+                    backgroundColor: "#36d278",
+                    label: "Change Email"
+                    },
+                {
+                    backgroundColor: "#22cfc6",
+                    label: "Change Password"
+                    },
+                {
+                    backgroundColor: "#8794a1",
+                    label: "Change Username"
+                    },
+                {
+                    backgroundColor: "#1ccdaa",
+                    label: "Change Image"
+                }]
+        };
+        var scrollMenu = ScrollMenu(setupOption);
+    </script>

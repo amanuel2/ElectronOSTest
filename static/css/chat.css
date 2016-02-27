@@ -1,0 +1,72 @@
+#flex{
+  background-color: blue
+}
+#toolbar{
+  position: relative;
+   left: 320px;;
+}
+
+#mdcardImage{
+  width:320px;
+  height:150px
+  position:absolute;;
+  bottom:
+}
+#item{
+  height:10px;
+  width:10px;
+}
+#welcomeUser{
+  position:relative;
+  left:25px
+}
+#seachIcon{
+  position:relative;
+  bottom:10px;
+}
+#buttonSearch{
+  position:relative;
+  bottom:10px
+}
+.container{
+  position: relative;
+  bottom:70px
+}
+#friendAvatar{
+  height: auto;
+    width: auto;
+    max-width: 50px;
+    max-height: 50px;
+}
+.Headbar{
+  position: relative;
+  top:50px;
+}
+#profileImage{
+  display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#images{
+  positon:relative;
+}
+.inner-image {
+  position: absolute;
+  top: 15px;
+  right: 90px;
+
+}
+
+button#buttonMyProfile {
+    top: 9px;
+    left: 380px;
+}
+button#buttonLogout {
+    right: -380px;
+    bottom: -9px;
+    height: 40px;
+}

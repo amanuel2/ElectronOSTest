@@ -1,0 +1,65 @@
+<head>
+<link rel="stylesheet" href="css/chatRoom.css"/>
+</head>
+<div class="contatinerChatRoom">
+
+<div class="chat">
+  <div id="chatInbox">
+  <md-list >
+   <md-list-item ng-repeat="post in chat">
+     <img alt="{{ person.name }}" ng-src="{{ post.Image }}" class="md-avatar" />
+     <span class="text"><font face="Impact" color="purple" size = "3">{{post.Name}}</font>  <strong>{{post.Textvalue}} </strong></span>
+     <md-icon md-svg-icon="menu"  ng-click="editChat(post.Textvalue, post.$id, post.Name, post.Textvalue)" aria-label="Open Chat" class="md-secondary md-hue-3"></md-icon>
+    </md-list-item>
+   </md-list>
+  </div>
+<form name="Chat" id="chatForm">
+<md-input-container id="ChatInput">
+    <label style="color:black;">Type a message here...</label>
+    <input ng-model= "chatTextValue" ng-minlength="1" type="text" required>
+    <md-button class="md-fab" id="fabChat" aria-label="Use Android" ng-click="sendMessageChat();">
+  <ng-md-icon icon="send" style="fill: white" size="30" id="fabChatIcon"></ng-md-icon>
+</md-button>
+</md-input-container>
+</form>
+
+</div>
+
+
+<div id="firepad-container"></div>
+
+   <script>
+    function init() {
+      //// Initialize Firebase.
+      var firepadRef = getExampleRef();
+      // TODO: Replace above line with:
+      // var firepadRef = new Firebase('<YOUR FIREBASE URL>');
+      //// Create ACE
+      var editor = ace.edit("firepad-container");
+      editor.setTheme("ace/theme/monokai");
+      var session = editor.getSession();
+      session.setUseWrapMode(true);
+      session.setUseWorker(false);
+      session.setMode("ace/mode/javascript");
+      //// Create Firepad.
+      var firepad = Firepad.fromACE(firepadRef, editor, {
+        defaultText: 'function HelloWorld() {\n  var message = "Hello, world."; \n console.log(message);\n}\n HelloWorld()'
+      });
+    }
+    // Helper to get hash from end of URL or generate a random one.
+    function getExampleRef() {
+      var ref = new Firebase('https://firepad.firebaseio-demo.com');
+      var hash = window.location.hash.replace(/#/g, '');
+      if (hash) {
+        ref = ref.child(hash);
+      } else {
+        ref = ref.push(); // generate unique location.
+        window.location = window.location + '#' + ref.key(); // add it as a hash to the URL.
+      }
+      if (typeof console !== 'undefined')
+        console.log('Firebase data: ', ref.toString());
+      return ref;
+    }
+    init()
+  </script>
+</div>
