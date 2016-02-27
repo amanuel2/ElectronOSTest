@@ -1,10 +1,15 @@
 # ElectronOSTest
 ElectronOSTest...
 
-While In your in Project Folder
+##Instructions
 <br>
-Run npm install...<br>
-Then Run bower install...<br>
-Then finnally npm start..<br>
+Run npm install at the main file...<br>
+Then Run bower install at the main file...<br>
+Then Run git clone https://github.com/ajaxorg/ace-builds.git inside the static folder ...<br>
+Then finnally npm start at the main file..<br>
 
 You should see the desktop app then! 
+If not please request an issue....
+
+##Contribution!
+Conytibutions are welcome! Just add a pull request
